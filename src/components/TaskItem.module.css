@@ -1,0 +1,110 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, opacity 0.2s;
+  list-style: none;
+}
+
+.item:hover {
+  border-color: var(--border-hover);
+}
+
+.item.done {
+  opacity: 0.5;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border-hover);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  color: var(--accent-text);
+}
+
+.checkbox:hover {
+  border-color: var(--accent);
+}
+
+.checkbox.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.4;
+  word-break: break-word;
+  cursor: default;
+}
+
+.done .text {
+  text-decoration: line-through;
+  color: var(--text-hint);
+}
+
+.editInput {
+  flex: 1;
+  background: var(--surface2);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+
+.priority {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: var(--mono);
+}
+
+.priHigh {
+  background: var(--high-bg);
+  color: var(--high-text);
+}
+
+.priMed {
+  background: var(--med-bg);
+  color: var(--med-text);
+}
+
+.priLow {
+  background: var(--low-bg);
+  color: var(--low-text);
+}
+
+.deleteBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-hint);
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.deleteBtn:hover {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--high);
+}
